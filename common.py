@@ -86,3 +86,12 @@ def sieve(UPPER_BOUND):
 
 	return primes
 
+def sum_digits(number):
+	total = 0
+	full = str(number)
+	for (i,c) in enumerate(full):
+		total += int(c)
+
+	return total 
+
+
