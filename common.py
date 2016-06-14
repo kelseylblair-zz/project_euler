@@ -89,7 +89,7 @@ def sieve(UPPER_BOUND):
 def sum_digits(number):
 	total = 0
 	full = str(number)
-	for (i,c) in enumerate(full):
+	for c in full:
 		total += int(c)
 
 	return total 
