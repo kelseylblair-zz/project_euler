@@ -1,6 +1,6 @@
 # one + two + three + four + five = 19
 
-NUMBER = 101
+NUMBER = 5
 
 lengths = {
     1: len("one"), 
@@ -59,7 +59,7 @@ for x in xrange(1, NUMBER + 1):
             place = 0
     if l == 2 or place == 2:
         if int(s[l-2]) == 1:
-            total += lengths[int(s[l-2:l-1])]
+            total += lengths[int(s[l-2:])]
         elif int(s[l-2]) != 0:
             total += lengths[int(s[l-2]) * 10]
             place = 1
@@ -77,7 +77,7 @@ print total
 #           if tens digit = 1, find in list, otherwise parse & drop down
 # 3-digit = need to parse out first digit, then add hundredn, maybe add and
 #           then drop down to the 2-digit
-# 4-digit = for this problem, 1000, but maybe worth parsing anyway for competion
+# 4-digit = for this problem, 1000, but maybe worth parsing anyway for completion
 
 
 

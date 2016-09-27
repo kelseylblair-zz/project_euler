@@ -23,6 +23,22 @@ def factorize(number):
 
 	return factors
 
+def nth_fibonacci(limit):
+	a = 1
+	b = 1
+	for x in xrange(limit):
+		a, b = b, a + b
+	return b		
+
+def get_divisors(number):
+        divisors = [1]
+	if number > 1:
+       		for x in xrange(2, number):
+                	if number % x == 0 and x not in divisors:
+                        	divisors.append(x)
+                        	divisors.append(number / x)
+		return divisors
+
 def get_nth_prime(index):
 	count = 1
 	number = 2
@@ -88,10 +104,6 @@ def sieve(UPPER_BOUND):
 
 def sum_digits(number):
 	total = 0
-	full = str(number)
-	for c in full:
+	for c in str(number):
 		total += int(c)
-
 	return total 
-
-
